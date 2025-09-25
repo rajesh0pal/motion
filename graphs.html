@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Map Section: Graphical Representation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .section-title {
+            color: #004d99;
+            text-align: center;
+            border-bottom: 3px double #004d99;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #0099ff;
+            border-left: 5px solid #0099ff;
+            padding-left: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .table-container {
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            min-width: 600px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #e6f7ff;
+            color: #004d99;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .key-concept {
+            font-weight: bold;
+            color: #cc0000;
+        }
+        /* --- Graph Styling --- */
+        .graphs-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-around;
+            padding: 20px 0;
+        }
+        .graph-box {
+            width: 200px;
+            height: 150px;
+            background: #fff;
+            border: 1px solid #ccc;
+            position: relative;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            padding: 10px; /* Padding for axes space */
+        }
+        .graph-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-top: 5px;
+            color: #444;
+        }
+        .plot-area {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 90%;
+            height: 90%;
+        }
+        .axis-x {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #333;
+        }
+        .axis-y {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background: #333;
+        }
+        .label-y {
+            position: absolute;
+            left: -35px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+            font-size: 0.8em;
+        }
+        .label-x {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8em;
+        }
+        /* Individual Graph Lines */
+        .line-rest {
+            position: absolute;
+            top: 30%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: red;
+        }
+        .line-uniform-speed {
+            /* This is a Distance-Time graph */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-top: 2px solid transparent;
+            background: linear-gradient(to top right, transparent calc(100% - 2px), green 1px);
+        }
+        .line-uniform-velocity {
+            /* This is a Velocity-Time graph */
+            position: absolute;
+            top: 30%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: blue;
+        }
+        /* FIX: Uniform Acceleration line drawing (Velocity-Time) */
+        .line-uniform-accel {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-top: 2px solid transparent;
+            background: linear-gradient(to top right, transparent calc(100% - 2px), purple 1px);
+        }
+        .area-v-t {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80%;
+            height: 60%;
+            background: rgba(255, 165, 0, 0.3);
+            border-top: 2px solid orange;
+            border-right: 2px solid orange;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="section-title">Mind Map Component: Graphical Representation (The "Visualizing Motion" Branch)</h1>
+
+    <h2>I. Summary Table</h2>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Graph Type</th>
+                    <th>Axes (Y-Axis vs. X-Axis)</th>
+                    <th>Motion Type</th>
+                    <th>Look of the Graph</th>
+                    <th>What the Slope Represents</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Distance-Time</td>
+                    <td>Distance (<span class="math">m</span>) vs. Time (<span class="math">s</span>)</td>
+                    <td>Rest</td>
+                    <td>Horizontal line (parallel to x-axis)</td>
+                    <td><span class="key-concept">Speed</span> (is zero)</td>
+                </tr>
+                <tr>
+                    <td>Distance-Time</td>
+                    <td>Distance (<span class="math">m</span>) vs. Time (<span class="math">s</span>)</td>
+                    <td>Uniform Speed</td>
+                    <td>Straight line with a positive slope</td>
+                    <td><span class="key-concept">Speed</span> (is constant)</td>
+                </tr>
+                <tr>
+                    <td>Velocity-Time</td>
+                    <td>Velocity (<span class="math">m/s</span>) vs. Time (<span class="math">s</span>)</td>
+                    <td>Uniform Velocity (Zero Acceleration)</td>
+                    <td>Horizontal line (parallel to x-axis)</td>
+                    <td><span class="key-concept">Acceleration</span> (is zero)</td>
+                </tr>
+                <tr>
+                    <td>Velocity-Time</td>
+                    <td>Velocity (<span class="math">m/s</span>) vs. Time (<span class="math">s</span>)</td>
+                    <td>Uniform Acceleration</td>
+                    <td>Straight line with a positive slope (from origin/y-intercept)</td>
+                    <td><span class="key-concept">Acceleration</span> (is constant)</td>
+                </tr>
+                <tr>
+                    <td>Area under V-T Graph</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>Area under the velocity line</td>
+                    <td>Represents **Displacement**</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <h2>II. Graph Sketches</h2>
+    <p>Visual representations of the key types of motion graphs:</p>
+
+    <div class="graphs-container">
+        <div class="graph-set">
+            <div class="graph-box" title="Distance vs. Time: Rest">
+                <div class="plot-area">
+                    <div class="axis-x"></div>
+                    <div class="axis-y"></div>
+                    <div class="line-rest"></div>
+                </div>
+                <div class="label-y">Distance</div>
+                <div class="label-x">Time</div>
+            </div>
+            <div class="graph-title">Distance-Time: Rest</div>
+        </div>
+
+        <div class="graph-set">
+            <div class="graph-box" title="Distance vs. Time: Uniform Speed">
+                <div class="plot-area">
+                    <div class="axis-x"></div>
+                    <div class="axis-y"></div>
+                    <div class="line-uniform-speed"></div>
+                </div>
+                <div class="label-y">Distance</div>
+                <div class="label-x">Time</div>
+            </div>
+            <div class="graph-title">Distance-Time: Uniform Speed</div>
+        </div>
+
+        <div class="graph-set">
+            <div class="graph-box" title="Velocity vs. Time: Uniform Velocity (Zero Acceleration)">
+                <div class="plot-area">
+                    <div class="axis-x"></div>
+                    <div class="axis-y"></div>
+                    <div class="line-uniform-velocity"></div>
+                </div>
+                <div class="label-y">Velocity</div>
+                <div class="label-x">Time</div>
+            </div>
+            <div class="graph-title">Velocity-Time: Uniform Velocity</div>
+        </div>
+
+        <div class="graph-set">
+            <div class="graph-box" title="Velocity vs. Time: Uniform Acceleration">
+                <div class="plot-area">
+                    <div class="axis-x"></div>
+                    <div class="axis-y"></div>
+                    <div class="line-uniform-accel"></div>
+                </div>
+                <div class="label-y">Velocity</div>
+                <div class="label-x">Time</div>
+            </div>
+            <div class="graph-title">Velocity-Time: Uniform Acceleration</div>
+        </div>
+
+        <div class="graph-set">
+            <div class="graph-box" title="Area under V-T Graph">
+                <div class="plot-area">
+                    <div class="axis-x"></div>
+                    <div class="axis-y"></div>
+                    <div class="area-v-t"></div>
+                </div>
+                <div class="label-y">Velocity</div>
+                <div class="label-x">Time</div>
+            </div>
+            <div class="graph-title">Area = Displacement</div>
+        </div>
+    </div>
+
+</body>
+</html>

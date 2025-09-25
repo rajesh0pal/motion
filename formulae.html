@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Map Section: Formulae</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .section-title {
+            color: #004d99;
+            text-align: center;
+            border-bottom: 3px double #004d99;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #0099ff;
+            border-left: 5px solid #0099ff;
+            padding-left: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .formula-box {
+            background-color: #e6f7ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .formula-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .formula-display {
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 1.4em;
+            color: #8b0000;
+            margin: 15px 0;
+            display: block;
+        }
+        .fraction {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 5px;
+        }
+        .numerator {
+            padding-bottom: 2px;
+            display: block;
+        }
+        .denominator {
+            padding-top: 2px;
+            display: block;
+        }
+        .fraction-bar {
+            border:none; 
+            border-top: 2px solid #8b0000;
+            margin: 0;
+            width: 100%;
+        }
+        .math {
+            font-style: italic;
+        }
+        .key-list {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        .key-list li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="section-title">Mind Map Component: Formulae (The "How to Calculate" Branch)</h1>
+    <p>This section lists the essential mathematical relationships and the three Equations of Motion for the chapter.</p>
+
+    <div class="formula-box">
+        <div class="formula-title">1. Average Speed (<span class="math">v</span><sub>avg</sub>):</div>
+        <div class="formula-display">
+            Average Speed = 
+            <span class="fraction">
+                <span class="numerator">Total Distance (<span class="math">s</span>)</span>
+                <hr class="fraction-bar">
+                <span class="denominator">Total Time (<span class="math">t</span>)</span>
+            </span>
+        </div>
+    </div>
+
+    <div class="formula-box">
+        <div class="formula-title">2. Average Velocity (<span class="math">v</span><sub>avg</sub>):</div>
+        <div class="formula-display">
+            Average Velocity = 
+            <span class="fraction">
+                <span class="numerator">Initial Velocity (<span class="math">u</span>) + Final Velocity (<span class="math">v</span>)</span>
+                <hr class="fraction-bar">
+                <span class="denominator">2</span>
+            </span>
+            &nbsp;&nbsp;OR&nbsp;&nbsp; <span class="math">v</span><sub>avg</sub> = (<span class="math">u</span> + <span class="math">v</span>) / 2
+        </div>
+    </div>
+
+    <div class="formula-box">
+        <div class="formula-title">3. Acceleration (<span class="math">a</span>):</div>
+        <div class="formula-display">
+            <span class="math">a</span> = 
+            <span class="fraction">
+                <span class="numerator"><span class="math">v</span> - <span class="math">u</span></span>
+                <hr class="fraction-bar">
+                <span class="denominator"><span class="math">t</span></span>
+            </span>
+        </div>
+    </div>
+
+    <div class="formula-box">
+        <h2>The Three Equations of Motion (For Uniformly Accelerated Motion)</h2>
+        <ol class="key-list">
+            <li>
+                <div class="formula-title">Velocity-Time Relation (Equation 1):</div>
+                <div class="formula-display">
+                    <span class="math">v = u + at</span>
+                </div>
+            </li>
+            <li>
+                <div class="formula-title">Position-Time Relation (Equation 2):</div>
+                <div class="formula-display">
+                    <span class="math">s = ut + <span class="fraction"><span class="numerator">1</span><hr class="fraction-bar" style="width: 15px;"><span class="denominator">2</span></span>at<sup>2</sup></span>
+                </div>
+            </li>
+            <li>
+                <div class="formula-title">Position-Velocity Relation (Equation 3):</div>
+                <div class="formula-display">
+                    <span class="math">2as = v<sup>2</sup> - u<sup>2</sup></span>
+                </div>
+            </li>
+        </ol>
+        <p style="font-size: 0.9em; margin-top: 15px;">*Where <span class="math">u</span> = Initial Velocity, <span class="math">v</span> = Final Velocity, <span class="math">a</span> = Acceleration, <span class="math">s</span> = Displacement/Distance, <span class="math">t</span> = Time.</p>
+    </div>
+
+</body>
+</html>

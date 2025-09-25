@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Map Section: Distinctions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .section-title {
+            color: #004d99;
+            text-align: center;
+            border-bottom: 3px double #004d99;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #cc0000;
+            border-left: 5px solid #cc0000;
+            padding-left: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .table-container {
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #e6f7ff;
+            color: #004d99;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        td:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .key-point {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="section-title">Mind Map Component: Distinctions (The "Comparing Concepts" Branch)</h1>
+    <p>This section contrasts related physical quantities and types of motion, highlighting their key differences.</p>
+
+    <div class="table-container">
+        <h2>Distance vs. Displacement</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Basis of Distinction</th>
+                    <th>Distance</th>
+                    <th>Displacement</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="key-point">Definition</td>
+                    <td>Represents the **Total path length** covered.</td>
+                    <td>Represents the **Shortest path** measured from initial to final position.</td>
+                </tr>
+                <tr>
+                    <td class="key-point">Quantity Type</td>
+                    <td>A **Scalar** quantity (only magnitude).</td>
+                    <td>A **Vector** quantity (magnitude and direction).</td>
+                </tr>
+                <tr>
+                    <td class="key-point">Value</td>
+                    <td>Always **&ge; 0** (Cannot be zero or negative).</td>
+                    <td>Can be **zero** (if final position = initial position) or negative.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-container">
+        <h2>Speed vs. Velocity</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Basis of Distinction</th>
+                    <th>Speed</th>
+                    <th>Velocity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="key-point">Definition</td>
+                    <td>Rate of change of **distance**.</td>
+                    <td>Rate of change of **displacement**.</td>
+                </tr>
+                <tr>
+                    <td class="key-point">Quantity Type</td>
+                    <td>A **Scalar** quantity.</td>
+                    <td>A **Vector** quantity.</td>
+                </tr>
+                <tr>
+                    <td class="key-point">Required Data</td>
+                    <td>Only **magnitude** is specified.</td>
+                    <td>**Magnitude** and **Direction** are specified.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-container">
+        <h2>Uniform Motion vs. Non-Uniform Motion</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Basis of Distinction</th>
+                    <th>Uniform Motion</th>
+                    <th>Non-Uniform Motion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="key-point">Distance/Time</td>
+                    <td>Covers **Equal distance** in equal intervals of time.</td>
+                    <td>Covers **Unequal distance** in equal intervals of time.</td>
+                </tr>
+                <tr>
+                    <td class="key-point">Velocity</td>
+                    <td>Velocity is **constant** (or zero acceleration).</td>
+                    <td>Velocity is **variable** (or non-zero acceleration).</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="table-container">
+        <h2>Uniform vs. Non-Uniform Acceleration</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Basis of Distinction</th>
+                    <th>Uniform Acceleration</th>
+                    <th>Non-Uniform Acceleration</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="key-point">Rate of Change</td>
+                    <td>Velocity changes by **equal amounts** in equal intervals of time.</td>
+                    <td>Velocity changes by **unequal amounts** in equal intervals of time.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

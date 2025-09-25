@@ -3,116 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework Uploader</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Motion Chapter Mind Map Index</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        .index-title {
+            color: #004d99;
+            text-align: center;
+            border-bottom: 4px solid #004d99;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+        /* Style for the Central Theme box */
+        .theme-box {
+            background-color: #ffe6e6;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px dashed #cc0000;
+            margin-bottom: 40px;
+        }
+        .theme-box h3 {
+            color: #cc0000;
+            font-size: 1.8em;
+            margin: 0;
+        }
+        .theme-box p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        .key-term {
+            font-weight: bold;
+            color: #333;
+        }
+        /* Standard link styles */
+        .section-group {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #e6f7ff;
+        }
+        .section-group h2 {
+            color: #0066cc;
+            font-size: 1.5em;
+            margin-top: 0;
+            border-bottom: 2px solid #b3d9ff;
+            padding-bottom: 5px;
+        }
+        .link-list {
+            list-style: none;
+            padding: 0;
+        }
+        .link-list li {
+            margin-bottom: 10px;
+        }
+        .link-list a {
+            text-decoration: none;
+            color: #8b0000;
+            font-weight: bold;
+            display: block;
+            padding: 8px 12px;
+            background-color: #ffffff;
+            border: 1px solid #ffcccc;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .link-list a:hover {
+            background-color: #cc0000;
+            color: #ffffff;
+            border-color: #8b0000;
         }
     </style>
 </head>
-<body class="bg-gray-100 p-8 flex items-center justify-center min-h-screen">
-    <div class="max-w-xl w-full mx-auto bg-white p-8 rounded-xl shadow-lg border border-gray-200 text-center">
-        <h1 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-gray-200 pb-2">Homework Submission</h1>
+<body>
+
+    <div class="container">
+        <h1 class="index-title">Chapter 7: MOTION - Mind Map Index</h1>
+
+        <div class="theme-box">
+            <h3>I. The Central Theme: <span class="key-term">MOTION</span></h3>
+            <p><strong>Key Idea:</strong> The Change in Position of an Object with Time.</p>
+            <p><strong>Reference Point:</strong> The concept of an **Origin** is essential for describing position.</p>
+        </div>
         
-        <p class="text-gray-600 mb-6">
-            Please upload your homework file below. You can also link it to your Google Drive.
-        </p>
+        <p style="text-align: center; margin-bottom: 40px;">Use the branches below to explore the detailed concepts, formulas, and graphs.</p>
 
-        <div class="space-y-6">
-            <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 hover:border-blue-500 transition-colors cursor-pointer"
-                 id="drop-area">
-                <input type="file" id="file-input" class="hidden" multiple>
-                <label for="file-input" class="flex flex-col items-center justify-center cursor-pointer">
-                    <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v8"></path>
-                    </svg>
-                    <p class="mt-2 text-sm text-gray-600"><span class="font-medium text-blue-600">Click to upload</span> or drag and drop</p>
-                    <p id="file-status" class="mt-1 text-xs text-gray-500">No file selected</p>
-                </label>
-            </div>
+        <div class="section-group">
+            <h2>II. Concepts & Definitions Branch (What is it?)</h2>
+            <ul class="link-list">
+                <li><a href="definitions.html" target="_blank">Section II: Definitions, Symbols, and SI Units</a></li>
+            </ul>
+        </div>
 
-            <div class="flex items-center justify-center space-x-4">
-                <button id="upload-button" class="flex-1 py-3 px-6 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
-                    Upload
-                </button>
-                <button id="google-drive-button" class="flex-1 py-3 px-6 bg-gray-200 text-gray-800 font-semibold rounded-lg shadow-md hover:bg-gray-300 transition-colors">
-                    Link Google Drive
-                </button>
-            </div>
+        <div class="section-group">
+            <h2>III. Contrasts & Formulas Branch (Comparing & Calculating)</h2>
+            <ul class="link-list">
+                <li><a href="distinctions.html" target="_blank">Section III: Distinctions (Distance vs. Displacement, Speed vs. Velocity, etc.)</a></li>
+                <li><a href="formulae.html" target="_blank">Section IV: Formulae (Equations of Motion, Speed, Acceleration)</a></li>
+            </ul>
+        </div>
+
+        <div class="section-group">
+            <h2>IV. Special Topics Branch</h2>
+            <ul class="link-list">
+                <li><a href="graphs.html" target="_blank">Section V: Graphical Representation (Visualizing Motion)</a></li>
+                <li><a href="circular.html" target="_blank">Section VI: Special Motion (Uniform Circular Motion - UCM)</a></li>
+            </ul>
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const fileInput = document.getElementById('file-input');
-            const fileStatus = document.getElementById('file-status');
-            const uploadButton = document.getElementById('upload-button');
-            const googleDriveButton = document.getElementById('google-drive-button');
-
-            // Handle file selection from input
-            fileInput.addEventListener('change', (e) => {
-                const files = e.target.files;
-                if (files.length > 0) {
-                    fileStatus.textContent = `${files.length} file(s) selected.`;
-                    uploadButton.disabled = false;
-                } else {
-                    fileStatus.textContent = 'No file selected';
-                    uploadButton.disabled = true;
-                }
-            });
-
-            // Handle drag and drop
-            const dropArea = document.getElementById('drop-area');
-            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-                dropArea.addEventListener(eventName, preventDefaults, false);
-            });
-
-            function preventDefaults(e) {
-                e.preventDefault();
-                e.stopPropagation();
-            }
-
-            dropArea.addEventListener('drop', (e) => {
-                const files = e.dataTransfer.files;
-                fileInput.files = files;
-                if (files.length > 0) {
-                    fileStatus.textContent = `${files.length} file(s) selected.`;
-                    uploadButton.disabled = false;
-                } else {
-                    fileStatus.textContent = 'No file selected';
-                    uploadButton.disabled = true;
-                }
-            });
-
-            // Handle the upload button click
-            uploadButton.addEventListener('click', () => {
-                if (fileInput.files.length > 0) {
-                    fileStatus.textContent = 'Uploading...';
-                    // In a real application, you would send the files to a server here.
-                    // This is a placeholder for the actual upload logic.
-                    setTimeout(() => {
-                        fileStatus.textContent = 'Upload complete!';
-                        uploadButton.disabled = true;
-                        fileInput.value = '';
-                    }, 2000);
-                }
-            });
-
-            // Handle the Google Drive button click (Placeholder)
-            googleDriveButton.addEventListener('click', () => {
-                // To connect to Google Drive, a real application would use the Google Drive API.
-                // This typically involves:
-                // 1. A backend server to securely store API credentials.
-                // 2. An OAuth 2.0 flow to authenticate the user and get their permission.
-                // 3. A POST request from the server to the Google Drive API to upload the file.
-                // This cannot be done with a simple client-side HTML page due to security risks and browser limitations.
-                alert('This button is a placeholder. A real application would connect to the Google Drive API to handle file uploads.');
-            });
-
-        });
-    </script>
 </body>
 </html>
